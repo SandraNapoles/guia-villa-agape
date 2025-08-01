@@ -1,157 +1,130 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guia Villa Ágape</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Ágape | Guia Interativo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      background: #fefaf5;
+      color: #333;
       margin: 0;
       padding: 0;
-      background: #f1efe5;
-      color: #2e2e2e;
     }
     header {
-      background: linear-gradient(to right, #6c9a5d, #b4a748);
-      color: white;
-      padding: 2rem 1rem;
+      background: #a27c5c;
+      color: #fff;
       text-align: center;
-      background-image: url('https://images.unsplash.com/photo-1611424185370-47b737b65e63?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      margin: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 0.5rem;
-      border-radius: 0.5rem;
+      padding: 2rem 1rem;
+      font-family: 'Playfair Display', serif;
     }
     .container {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
-    .button {
-      background-color: #81a65c;
+    h2 {
+      color: #a27c5c;
+      border-bottom: 1px solid #a27c5c;
+      padding-bottom: 0.3rem;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      background: #d6b18c;
       color: white;
       padding: 1rem;
+      margin: 0.5rem 0;
       border: none;
       border-radius: 10px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       text-align: center;
-      cursor: pointer;
-      transition: background-color 0.3s;
       text-decoration: none;
     }
-    .button:hover {
-      background-color: #678a4c;
+    .section {
+      margin-bottom: 2rem;
     }
-    section {
-      padding: 1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #eeeadd;
-      font-size: 0.9rem;
-    }
-    .stars {
-      font-size: 1.5rem;
-      color: gold;
+    a {
+      color: #a27c5c;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Guia Interativo - Villa Ágape 🌿</h1>
+    <h1>Guia Interativo - Villa Ágape</h1>
+    <p>Bem-vindo à Chapada dos Veadeiros!</p>
   </header>
-
   <div class="container">
-    <a class="button" href="#info">📋 Informação da Hospedagem</a>
-    <a class="button" href="https://www.google.com/maps/place/14%C2%B008'51.8%22S+47%C2%B031'12.8%22W/@-14.1477198,-47.5227923,17z" target="_blank">📍 Ver no Mapa</a>
-    <a class="button" href="#comida">🍽️ Onde Comer</a>
-    <a class="button" href="#cafe">☕ Café da Manhã</a>
-    <a class="button" href="#contatos">🛎️ Emergências e Contatos</a>
-    <a class="button" href="#regras">📐 Regras da Casa</a>
-    <a class="button" href="https://www.tempo.com/fases-lunares/" target="_blank">🌕 Fase da Lua</a>
+    <a class="btn" href="#checkin">🕒 Check-in & Check-out</a>
+    <a class="btn" href="#localizacao">📍 Localização</a>
+    <a class="btn" href="#wifi">📶 Wi-Fi e Voltagem</a>
+    <a class="btn" href="#cafe">🥐 Café da Manhã</a>
+    <a class="btn" href="#restaurantes">🍽️ Restaurantes e Lanches</a>
+    <a class="btn" href="#atrativos">🌄 Atrações</a>
+    <a class="btn" href="#guias">🧭 Guias Parceiros</a>
+    <a class="btn" href="#consciencia">♻️ Consciência & Sustentabilidade</a>
+    <a class="btn" href="#uteis">📝 Informações Úteis</a>
+
+    <div id="checkin" class="section">
+      <h2>Check-in & Check-out</h2>
+      <p><strong>Check-in:</strong> a partir das 15h (pode consultar sobre disponibilidade antes)</p>
+      <p><strong>Check-out:</strong> até as 11h (podemos flexibilizar, consulte-nos)</p>
+    </div>
+
+    <div id="localizacao" class="section">
+      <h2>Localização</h2>
+      <p>📍 Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai (atrás da Pousada Paralelo 14)</p>
+      <p><a href="https://www.google.com/maps?q=Villa+%C3%81gape+Chapada" target="_blank">Google Maps</a> | <a href="https://ul.waze.com/ul?ll=-14.14792300%2C-47.52013900" target="_blank">Waze</a></p>
+    </div>
+
+    <div id="wifi" class="section">
+      <h2>Wi-Fi e Voltagem</h2>
+      <p><strong>Login:</strong> Villa Ágape_Visitantes</p>
+      <p><strong>Senha:</strong> pazeamor</p>
+      <p><strong>Voltagem:</strong> 220v</p>
+    </div>
+
+    <div id="cafe" class="section">
+      <h2>Café da Manhã (opcional)</h2>
+      <p>📍 Pousada Ostara (60m de distância) | Buffet self-service</p>
+      <p><strong>Horário:</strong> 06:30 às 09:30 | <strong>Valor:</strong> R$ 30,00/pessoa</p>
+      <p><a href="https://maps.app.goo.gl/RMhN6kqRSTWr3WRJ6" target="_blank">Ver no mapa</a></p>
+    </div>
+
+    <div id="restaurantes" class="section">
+      <h2>Restaurantes e Lanches</h2>
+      <p><strong>Restaurantes:</strong> Tabocas, Torresmo, Arena Maya, Alquimia, Lobo Guará, Cravo & Canela...</p>
+      <p><strong>Lanches:</strong> Magnífico, Sorveteria Frutos do Cerrado, Açaí do Guedes, Brocas...</p>
+    </div>
+
+    <div id="atrativos" class="section">
+      <h2>Principais Atrações</h2>
+      <p>Parque Nacional, Vale da Lua, Cataratas dos Couros, Santa Bárbara, Loquinhas, Mirante da Janela...</p>
+    </div>
+
+    <div id="guias" class="section">
+      <h2>Guias Parceiros</h2>
+      <p><strong>Ana Carolina:</strong> Roteiros alternativos e autorais</p>
+      <p><strong>Edson:</strong> <a href="https://wa.me/5511940012935" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/acsguiadachapada/" target="_blank">Instagram</a></p>
+      <p><strong>Reis:</strong> <a href="http://wa.me/message/VUODZUPBKIREJ1" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/reis.guia.chapada/" target="_blank">Instagram</a></p>
+      <p><strong>Guilherme:</strong> <a href="https://wa.me/5562994783982" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/gui.guia_chapadaveadeiros/" target="_blank">Instagram</a></p>
+    </div>
+
+    <div id="consciencia" class="section">
+      <h2>Consciência & Sustentabilidade</h2>
+      <p>Não jogar papel no vaso 🚽, separar o lixo, usar menos água e energia. Valorizamos práticas conscientes.</p>
+    </div>
+
+    <div id="uteis" class="section">
+      <h2>Informações Úteis</h2>
+      <p>⚠️ Pode haver queda de energia, sinal ou internet em alta temporada.</p>
+      <p>🏦 Bancos disponíveis: Itaú e Banco do Brasil (até 17h)</p>
+      <p>🧢 Leve repelente, protetor solar, chapéu e um casaquinho.</p>
+    </div>
   </div>
-
-  <section id="info">
-    <h2>Informações da Hospedagem</h2>
-    <p><strong>Check-in:</strong> A partir das 15h (consulte disponibilidade antecipada).</p>
-    <p><strong>Check-out:</strong> Até as 11h (flexível conforme disponibilidade).</p>
-    <p><strong>Wi-Fi:</strong> Login: Villa Ágape_Visitantes | Senha: pazeamor</p>
-    <p><strong>Endereço:</strong> Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai (rua atrás da Pousada Paralelo 14).</p>
-  </section>
-
-  <section id="comida">
-    <h2>🍴 Onde Comer</h2>
-    <p><strong>Restaurantes:</strong></p>
-    <ul>
-      <li>Torresmo</li>
-      <li>Tabocas</li>
-      <li>Arena Maya</li>
-      <li>Alquimia</li>
-      <li>Lobo Guará</li>
-      <li>Maracangalha</li>
-      <li>Cravo & Canela</li>
-      <li>Churrascaria Central</li>
-      <li>Coisas da Drica</li>
-      <li>Moinho</li>
-    </ul>
-    <p><strong>Lanches & Laricas:</strong></p>
-    <ul>
-      <li>Magnífico Lanches (62) 9489-6238</li>
-      <li>Sorveteria Frutos do Cerrado</li>
-      <li>Açaí do Japa</li>
-      <li>Açaí do Guedes (62) 99618-4966</li>
-      <li>Brocas Hamburgueria</li>
-    </ul>
-    <p><strong>Padarias e Cafés:</strong></p>
-    <ul>
-      <li>Café com Graça</li>
-      <li>Padaria Santa Maria</li>
-      <li>Panificadora Panepalan</li>
-    </ul>
-  </section>
-
-  <section id="cafe">
-    <h2>☕ Café da Manhã</h2>
-    <p>Parceria com a Pousada Ostara (60m da Villa Ágape) que oferece bufê self-service.</p>
-    <p><strong>Horário:</strong> 06:30h às 09:30h</p>
-    <p><strong>Valor:</strong> R$ 30,00 por pessoa/dia</p>
-    <p><a class="button" href="https://maps.app.goo.gl/RMhN6kqRSTWr3WRJ6" target="_blank">📍 Ver no Mapa</a></p>
-  </section>
-
-  <section id="contatos">
-    <h2>📞 Emergências e Contatos</h2>
-    <ul>
-      <li><strong>Villa Ágape:</strong> (21) 98869-5565</li>
-      <li><strong>CAT Alto Paraíso:</strong> (62) 3446-1159</li>
-      <li><strong>CAT São Jorge:</strong> (62) 3455-1090</li>
-      <li><strong>CAT Cavalcante:</strong> (62) 3494-1507</li>
-      <li><strong>Parque Nacional:</strong> (62) 3455-1116</li>
-    </ul>
-  </section>
-
-  <section id="regras">
-    <h2>📐 Regras da Casa</h2>
-    <ul>
-      <li>Silêncio após 22h</li>
-      <li>Proibido fumar dentro dos quartos</li>
-      <li>Não são permitidos visitantes sem aviso prévio</li>
-      <li>Preserve a natureza ao seu redor 🌿</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
-    <p>Desejamos uma estadia inesquecível! Com carinho, Villa Ágape 💚</p>
-  </footer>
 </body>
 </html>
