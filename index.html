@@ -27,6 +27,8 @@
       padding: 2rem 1rem;
       font-family: 'Playfair Display', serif;
     }
+    header h1 { margin: 0; }
+    header h1 span { display: block; font-size: 2rem; }
     .container {
       max-width: 800px;
       margin: auto;
@@ -34,7 +36,7 @@
     }
     .btn-group {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 0.5rem;
       margin-bottom: 1rem;
     }
@@ -47,6 +49,7 @@
       font-size: 0.9rem;
       cursor: pointer;
       transition: background 0.3s;
+      text-align: center;
     }
     .btn:hover { background: #5b6a2e; }
     .section {
@@ -68,31 +71,31 @@
 </head>
 <body>
   <header>
-    <h1>Guia do Hóspede<span style="display:block;font-size:0.8rem;">Villa Ágape</span></h1>
+    <h1>Guia do Hóspede<br><span>Villa Ágape</span></h1>
   </header>
   <div class="container">
     <div class="btn-group">
-      <button class="btn" data-section="checkin">Check-in</button>
+      <button class="btn" data-section="checkin">Check-in & Check-out</button>
       <button class="btn" data-section="localizacao">Localização</button>
-      <button class="btn" data-section="wifi">Wi-Fi</button>
-      <button class="btn" data-section="cafe">Café</button>
-      <button class="btn" data-section="restaurantes">Restaurantes</button>
-      <button class="btn" data-section="lanches">Lanches</button>
-      <button class="btn" data-section="atrativos">Atrações</button>
-      <button class="btn" data-section="guias">Guias</button>
+      <button class="btn" data-section="wifi">Wi-Fi & Voltagem</button>
+      <button class="btn" data-section="cafe">Café-da-manhã (Opcional)</button>
+      <button class="btn" data-section="restaurantes">Restaurantes & Pizzarias</button>
+      <button class="btn" data-section="lanches">Lanches & Açaí</button>
+      <button class="btn" data-section="atrativos">Principais Atrações</button>
+      <button class="btn" data-section="guias">Guias Parceiros</button>
       <button class="btn" data-section="sustentabilidade">Sustentabilidade</button>
-      <button class="btn" data-section="uteis">Úteis</button>
+      <button class="btn" data-section="uteis">Informações Úteis</button>
     </div>
 
     <div id="checkin" class="section">
       <h2>🕒 Check-in & Check-out</h2>
-      <p><strong>Check-in:</strong> a partir das 15h (flexível conforme disponibilidade).</p>
-      <p><strong>Check-out:</strong> até as 11h (podemos estender se possível).</p>
+      <p><strong>Check-in:</strong> a partir das 15h (flexível, conforme disponibilidade).</p>
+      <p><strong>Check-out:</strong> até as 11h (podemos estender se for possível).</p>
     </div>
 
     <div id="localizacao" class="section">
       <h2>📍 Localização</h2>
-      <p>Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai (atrás da Pousada Paralelo 14).</p>
+      <p>Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai - Alto Paraíso de GO (atrás da Pousada Paralelo 14).</p>
       <p><a href="https://www.google.com/maps?q=Villa+%C3%81gape+Chapada" target="_blank">Google Maps</a> | <a href="https://ul.waze.com/ul?ll=-14.14792300%2C-47.52013900" target="_blank">Waze</a></p>
     </div>
 
@@ -104,24 +107,38 @@
     </div>
 
     <div id="cafe" class="section">
-      <h2>🥐 Café da Manhã</h2>
-      <p>Parceria com Pousada Ostara – buffet self-service (06:30–09:30) por R$30.</p>
+      <h2>🥐 Café-da-manhã (Opcional)</h2>
+      <p>Parceria com Pousada Ostara – buffet self-service (06:30h–09:30h) por R$30,00/pessoa/dia.</p>
       <p><a href="https://maps.app.goo.gl/RMhN6kqRSTWr3WRJ6" target="_blank">Ver no mapa</a></p>
     </div>
 
     <div id="restaurantes" class="section">
-      <h2>🍽️ Restaurantes</h2>
+      <h2>🍕 Restaurantes & Pizzarias</h2>
       <ul>
         <li>Torresmo</li>
         <li>Tabocas</li>
         <li>Arena Maya</li>
         <li>Alquimia</li>
-        <li>Lobo Guará</li>
+        <li>Lobo Guará Bistro (alto)</li>
         <li>Maracangalha</li>
         <li>Cravo & Canela</li>
-        <li>Churrasc. Central</li>
-        <li>Coisas da Drica</li>
-        <li>Moinho</li>
+        <li>Vendinha 1951</li>
+        <li>Cantinho das Delícias (pizzaria)</li>
+        <li>Lua de São Jorge (sabores do cerrado)</li>
+        <li>La Vita e Bella (italiano)</li>
+        <li>Pizzaria Lua Nova</li>
+        <li>Jardim do Alto</li>
+        <li>Bali Pizza e Bar</li>
+        <li>Pizzaria Vila Chamego</li>
+        <li>Alta Gastronomia</li>
+        <li>Jambalaya (alto)</li>
+        <li>Restaurante Magnolia (alto)</li>
+      </ul>
+      <h2>🍻 Bares & Botecos</h2>
+      <ul>
+        <li>Vendinha 1961 (alto)</li>
+        <li>Bar Zen (alto)</li>
+        <li>Arena Maya</li>
       </ul>
     </div>
 
@@ -130,60 +147,72 @@
       <ul>
         <li>Magnífico Lanches (entrega)</li>
         <li>Sorveteria Frutos do Cerrado</li>
-        <li>Doceria</li>
+        <li>Doceria (ao lado do Frutos do Cerrado)</li>
         <li>Açaí do Japa</li>
         <li>Açaí do Guedes</li>
         <li>Açaíteria Sabor do Brasil</li>
-        <li>Açaíteria da Praça do Skate</li>
-        <li>Brocas (hambúrguer vegetariano)</li>
+        <li>Tapiocaria e Açaíteria da Praça do Skate</li>
+        <li>Hamburgueria Brocas</li>
+        <li>Hamburgueria Cerrado Burger</li>
+        <li>Hamburgueria Querubin</li>
+        <li>Hamburgueria Quiri-Quiri</li>
+        <li>Hamburgueria Óregon</li>
       </ul>
     </div>
 
     <div id="atrativos" class="section">
       <h2>🌄 Principais Atrações</h2>
       <ul>
-        <li><strong>Parque Nacional:</strong> trilhas, cachoeiras do Rio Preto, cânions.</li>
-        <li><strong>Vale da Lua:</strong> formações rochosas e poços para banho.</li>
-        <li><strong>Cataratas dos Couros:</strong> Almécegas, Parafuso, Bujão e Muralha.</li>
-        <li><strong>Santa Bárbara:</strong> águas azul-esverdeadas, guias locais.</li>
-        <li><strong>Loquinhas:</strong> trilhas fáceis, águas claras.</li>
-        <li><strong>Mirante da Janela:</strong> vista panorâmica, trilha desafiadora.</li>
-        <li><strong>Saltos do Rio Preto:</strong> duas quedas impressionantes.</li>
-        <li><strong>Jardim de Maytrea:</strong> pôr do sol.</li>
-        <li><strong>Segredo:</strong> queda de 100m.</li>
-        <li><strong>Cariocas:</strong> cânions e cachoeiras.</li>
-        <li><strong>Morro Redondo:</strong> queda de 60m.</li>
-        <li><em>Rafting e tubing no Rio das Almas.</em></li>
+        <li>Chapada Alta (somente com guia autorizado).</li>
+        <li>Portal do Beija-Flor.</li>
+        <li>Almécegas I, Almécegas II e São Bento (acesso conjunto).</li>
+        <li>Vale da Lua (rochas lembram solo lunar).</li>
+        <li>Cachoeira do Cordovil e Esmeralda (trilha de 1h).</li>
+        <li>Cachoeira dos Cristais (pastel no local).</li>
+        <li>São Bento (acesso fácil e saltos).</li>
+        <li>Catarata dos Couros (TOP 100).</li>
+        <li>Parque Nacional (limite diário de visitantes).</li>
+        <li>Jardim de Maytrea (campo magnético).</li>
+        <li>Cachoeira do Abismo e Mirante da Janela (trilha de 8km).</li>
+        <li>Águas Termais (Jequitibá, Morro Vermelho).</li>
+        <li>Santa Bárbara e Cachoeira do Rei do Prata (Cavalcante).</li>
+        <li>Bocaina do Farias, Label e Cachoeira do Dragão (São João da Aliança).</li>
       </ul>
+      <p><em>Consulte o CAT para informações atualizadas.</em></p>
     </div>
 
     <div id="guias" class="section">
       <h2>🧭 Guias Parceiros</h2>
       <ul>
-        <li>Ana Carolina – roteiros autorais</li>
-        <li>Edson – <a href="https://wa.me/5511940012935">WhatsApp</a>, <a href="https://instagram.com/acsguiadachapada">IG</a></li>
-        <li>Reis – <a href="http://wa.me/message/VUODZUPBKIREJ1">WhatsApp</a>, <a href="https://instagram.com/reis.guia.chapada">IG</a></li>
-        <li>Guilherme – <a href="https://wa.me/5562994783982">WhatsApp</a>, <a href="https://instagram.com/gui.guia_chapadaveadeiros">IG</a></li>
+        <li><strong>Ana Carolina:</strong> Condutor de Ecoturismo, nativa do Cerrado, roteiros alternativos e registros autorais.</li>
+        <li><strong>Edson:</strong> Guia de Ecoturismo na Chapada dos Veadeiros-GO; roteiros personalizados de acordo com seu perfil; veículo próprio.<br>
+          <a href="https://wa.me/5511940012935" target="_blank">WhatsApp (11) 94001-2935</a> | <a href="https://www.instagram.com/acsguiadachapada/" target="_blank">@acsguiadachapada</a>
+        </li>
+        <li><strong>Reis:</strong> Guia de Ecoturismo na Chapada dos Veadeiros-GO; associado e credenciado; transporte 4x4.<br>
+          <a href="http://wa.me/message/VUODZUPBKIREJ1" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/reis.guia.chapada/" target="_blank">@reis.guia.chapada</a>
+        </li>
       </ul>
     </div>
 
     <div id="sustentabilidade" class="section">
       <h2>♻️ Sustentabilidade</h2>
       <ul>
-        <li>Não jogue papel no vaso.</li>
+        <li>Descartar o lixo na lixeira que encontra-se no quintal antes do check-out.</li>
         <li>Banhos rápidos e uso moderado de secador.</li>
-        <li>Separe lixo seco e orgânico.</li>
-        <li>Lixo orgânico vira húmus.</li>
+        <li>Silêncio das 22h às 7h.</li>
+        <li>Não fumar dentro dos chalés (permitido na varanda).</li>
+        <li>Lave louça e descarte lixo antes do check-out.</li>
       </ul>
     </div>
 
     <div id="uteis" class="section">
       <h2>📝 Informações Úteis</h2>
       <ul>
-        <li>Quedas de energia/internet em alta temporada.</li>
-        <li>Bancos: Itaú e Banco do Brasil (até 17h).</li>
-        <li>Leve casaquinho, repelente, protetor solar e chapéu.</li>
-        <li>Lave louça e descarte lixo antes do check-out.</li>
+        <li>Pode ocorrer quedas de energia/internet na alta temporada.</li>
+        <li>Bancos: Itaú e Banco do Brasil (não temos Banco 24h).</li>
+        <li>Traga sempre um casaquinho, repelente, protetor solar e chapéu/boné.</li>
+        <li>Garrafa de água.</li>
+        <li>Toalha para levar para a cachoeira.</li>
       </ul>
     </div>
 
