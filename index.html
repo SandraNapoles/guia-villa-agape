@@ -7,86 +7,167 @@
   <title>Guia do Hóspede - Villa Ágape</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Roboto', sans-serif; background: #fefaf5; color: #333; margin: 0; padding: 0; }
-    header { background: #a27c5c; color: #fff; text-align: center; padding: 2rem 1rem; font-family: 'Playfair Display', serif; }
-    .container { max-width: 800px; margin: auto; padding: 2rem 1rem; }
-    section { margin-bottom: 2rem; }
-    h2 { color: olive; border-bottom: 2px solid olive; padding-bottom: 0.5rem; }
-    a { color: olive; text-decoration: none; }
+    :root {
+      --olive: #708238;
+      --sand: #f5f0e1;
+      --accent: #a27c5c;
+      --text: #333;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: var(--sand);
+      color: var(--text);
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .btn-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      background: var(--olive);
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #5b6a2e; }
+    .section {
+      display: none;
+      background: #fff;
+      padding: 1rem;
+      border-left: 4px solid var(--olive);
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 1rem;
+    }
+    .section.active { display: block; }
+    h2 {
+      margin-top: 0; color: var(--olive);
+      font-family: 'Playfair Display', serif;
+    }
     ul { padding-left: 1.2rem; }
     ul li { margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Guia do Hóspede - Villa Ágape</h1>
-    <p>Todas as informações divididas por categoria</p>
+    <h1>Guia do Hóspede<span style="display:block;font-size:0.8rem;">Villa Ágape</span></h1>
   </header>
   <div class="container">
+    <div class="btn-group">
+      <button class="btn" data-section="checkin">Check-in</button>
+      <button class="btn" data-section="localizacao">Localização</button>
+      <button class="btn" data-section="wifi">Wi-Fi</button>
+      <button class="btn" data-section="cafe">Café</button>
+      <button class="btn" data-section="restaurantes">Restaurantes</button>
+      <button class="btn" data-section="lanches">Lanches</button>
+      <button class="btn" data-section="atrativos">Atrações</button>
+      <button class="btn" data-section="guias">Guias</button>
+      <button class="btn" data-section="sustentabilidade">Sustentabilidade</button>
+      <button class="btn" data-section="uteis">Úteis</button>
+    </div>
 
-    <section id="checkin">
+    <div id="checkin" class="section">
       <h2>🕒 Check-in & Check-out</h2>
       <p><strong>Check-in:</strong> a partir das 15h (flexível conforme disponibilidade).</p>
       <p><strong>Check-out:</strong> até as 11h (podemos estender se possível).</p>
-    </section>
+    </div>
 
-    <section id="localizacao">
+    <div id="localizacao" class="section">
       <h2>📍 Localização</h2>
       <p>Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai (atrás da Pousada Paralelo 14).</p>
-      <p><a href="https://www.google.com/maps?q=Villa+%C3%81gape+Chapada" target="_blank">Ver no Google Maps</a> | <a href="https://ul.waze.com/ul?ll=-14.14792300%2C-47.52013900" target="_blank">Abrir no Waze</a></p>
-    </section>
+      <p><a href="https://www.google.com/maps?q=Villa+%C3%81gape+Chapada" target="_blank">Google Maps</a> | <a href="https://ul.waze.com/ul?ll=-14.14792300%2C-47.52013900" target="_blank">Waze</a></p>
+    </div>
 
-    <section id="wifi">
+    <div id="wifi" class="section">
       <h2>📶 Wi-Fi & Voltagem</h2>
       <p><strong>Rede:</strong> Villa Ágape_Visitantes</p>
       <p><strong>Senha:</strong> pazeamor</p>
       <p><strong>Voltagem:</strong> 220v</p>
-    </section>
+    </div>
 
-    <section id="cafe">
-      <h2>🥐 Café da Manhã (Opcional)</h2>
-      <p>Parceria com Pousada Ostara (60m) – Buffet self-service.</p>
-      <p><strong>Horário:</strong> 06:30 às 09:30 | <strong>Valor:</strong> R$ 30,00/pessoa</p>
+    <div id="cafe" class="section">
+      <h2>🥐 Café da Manhã</h2>
+      <p>Parceria com Pousada Ostara – buffet self-service (06:30–09:30) por R$30.</p>
       <p><a href="https://maps.app.goo.gl/RMhN6kqRSTWr3WRJ6" target="_blank">Ver no mapa</a></p>
-    </section>
+    </div>
 
-    <section id="restaurantes">
-      <h2>🍽️ Restaurantes & Lanches</h2>
+    <div id="restaurantes" class="section">
+      <h2>🍽️ Restaurantes</h2>
       <ul>
-        <li><strong>Restaurantes:</strong> Torresmo, Tabocas, Arena Maya, Alquimia, Lobo Guará, Maracangalha, Cravo & Canela, Churrasc. Central, Coisas da Drica, Moinho.</li>
-        <li><strong>Lanches & Açaí:</strong> Magnífico Lanches, Sorveteria Frutos do Cerrado, Doceria, Açaí do Japa, Açaí do Guedes, Sabor do Brasil, Açaíteria da Praça, Brocas.</li>
+        <li>Torresmo</li>
+        <li>Tabocas</li>
+        <li>Arena Maya</li>
+        <li>Alquimia</li>
+        <li>Lobo Guará</li>
+        <li>Maracangalha</li>
+        <li>Cravo & Canela</li>
+        <li>Churrasc. Central</li>
+        <li>Coisas da Drica</li>
+        <li>Moinho</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="atrativos">
+    <div id="lanches" class="section">
+      <h2>🥪 Lanches & Açaí</h2>
+      <ul>
+        <li>Magnífico Lanches (entrega)</li>
+        <li>Sorveteria Frutos do Cerrado</li>
+        <li>Doceria</li>
+        <li>Açaí do Japa</li>
+        <li>Açaí do Guedes</li>
+        <li>Açaíteria Sabor do Brasil</li>
+        <li>Açaíteria da Praça do Skate</li>
+        <li>Brocas (hambúrguer vegetariano)</li>
+      </ul>
+    </div>
+
+    <div id="atrativos" class="section">
       <h2>🌄 Principais Atrações</h2>
       <ul>
-        <li><strong>Parque Nacional da Chapada dos Veadeiros:</strong> trilhas, cachoeiras do Rio Preto, cânions.</li>
+        <li><strong>Parque Nacional:</strong> trilhas, cachoeiras do Rio Preto, cânions.</li>
         <li><strong>Vale da Lua:</strong> formações rochosas e poços para banho.</li>
-        <li><strong>Cataratas dos Couros:</strong> Almécegas, Parafuso, Bujão, Muralha.</li>
-        <li><strong>Cachoeira Santa Bárbara:</strong> águas azul-esverdeadas, acesso por guias locais.</li>
-        <li><strong>Cachoeiras das Loquinhas:</strong> águas claras e trilhas fáceis.</li>
+        <li><strong>Cataratas dos Couros:</strong> Almécegas, Parafuso, Bujão e Muralha.</li>
+        <li><strong>Santa Bárbara:</strong> águas azul-esverdeadas, guias locais.</li>
+        <li><strong>Loquinhas:</strong> trilhas fáceis, águas claras.</li>
         <li><strong>Mirante da Janela:</strong> vista panorâmica, trilha desafiadora.</li>
         <li><strong>Saltos do Rio Preto:</strong> duas quedas impressionantes.</li>
-        <li><strong>Jardim de Maytrea:</strong> contemplação do pôr do sol.</li>
-        <li><strong>Cachoeira do Segredo:</strong> queda de 100m, trilha de acesso.</li>
-        <li><strong>Cânions e Cachoeiras das Cariocas:</strong> paisagens deslumbrantes.</li>
-        <li><strong>Cachoeira do Morro Redondo:</strong> queda de 60m, acesso fácil.</li>
-        <li><em>Também há rafting e tubing no Rio das Almas.</em></li>
+        <li><strong>Jardim de Maytrea:</strong> pôr do sol.</li>
+        <li><strong>Segredo:</strong> queda de 100m.</li>
+        <li><strong>Cariocas:</strong> cânions e cachoeiras.</li>
+        <li><strong>Morro Redondo:</strong> queda de 60m.</li>
+        <li><em>Rafting e tubing no Rio das Almas.</em></li>
       </ul>
-    </section>
+    </div>
 
-    <section id="guias">
+    <div id="guias" class="section">
       <h2>🧭 Guias Parceiros</h2>
       <ul>
-        <li><strong>Ana Carolina:</strong> roteiros alternativos e registros autorais.</li>
-        <li><strong>Edson:</strong> <a href="https://wa.me/5511940012935" target="_blank">WhatsApp</a>, <a href="https://www.instagram.com/acsguiadachapada/" target="_blank">Instagram</a></li>
-        <li><strong>Reis:</strong> <a href="http://wa.me/message/VUODZUPBKIREJ1" target="_blank">WhatsApp</a>, <a href="https://www.instagram.com/reis.guia.chapada/" target="_blank">Instagram</a></li>
-        <li><strong>Guilherme:</strong> <a href="https://wa.me/5562994783982" target="_blank">WhatsApp</a>, <a href="https://www.instagram.com/gui.guia_chapadaveadeiros/" target="_blank">Instagram</a></li>
+        <li>Ana Carolina – roteiros autorais</li>
+        <li>Edson – <a href="https://wa.me/5511940012935">WhatsApp</a>, <a href="https://instagram.com/acsguiadachapada">IG</a></li>
+        <li>Reis – <a href="http://wa.me/message/VUODZUPBKIREJ1">WhatsApp</a>, <a href="https://instagram.com/reis.guia.chapada">IG</a></li>
+        <li>Guilherme – <a href="https://wa.me/5562994783982">WhatsApp</a>, <a href="https://instagram.com/gui.guia_chapadaveadeiros">IG</a></li>
       </ul>
-    </section>
+    </div>
 
-    <section id="consciencia">
+    <div id="sustentabilidade" class="section">
       <h2>♻️ Sustentabilidade</h2>
       <ul>
         <li>Não jogue papel no vaso.</li>
@@ -94,19 +175,29 @@
         <li>Separe lixo seco e orgânico.</li>
         <li>Lixo orgânico vira húmus.</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="uteis">
+    <div id="uteis" class="section">
       <h2>📝 Informações Úteis</h2>
       <ul>
-        <li>Quedas de energia/internet na alta temporada.</li>
+        <li>Quedas de energia/internet em alta temporada.</li>
         <li>Bancos: Itaú e Banco do Brasil (até 17h).</li>
         <li>Leve casaquinho, repelente, protetor solar e chapéu.</li>
         <li>Lave louça e descarte lixo antes do check-out.</li>
       </ul>
-    </section>
+    </div>
 
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.btn');
+      buttons.forEach(btn => btn.addEventListener('click', () => {
+        const section = btn.getAttribute('data-section');
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.getElementById(section).classList.add('active');
+      }));
+    });
+  </script>
 </body>
 </html>
 
