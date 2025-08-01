@@ -14,57 +14,17 @@
       --text: #333;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background: var(--sand);
-      color: var(--text);
-    }
-    header {
-      background: var(--accent);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-family: 'Playfair Display', serif;
-    }
-    header h1 { margin: 0; }
-    header h1 span { display: block; font-size: 2rem; }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 1rem;
-    }
-    .btn-group {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      background: var(--olive);
-      color: #fff;
-      border: none;
-      padding: 0.75rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: background 0.3s;
-      text-align: center;
-    }
+    body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: var(--sand); color: var(--text); }
+    header { background: var(--accent); color: #fff; text-align: center; padding: 2rem 1rem; font-family: 'Playfair Display', serif; }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    header h1 span { display: block; font-size: 2.5rem; }
+    .container { max-width: 800px; margin: auto; padding: 1rem; }
+    .btn-group { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 1rem; }
+    .btn { background: var(--olive); color: #fff; border: none; padding: 0.75rem; border-radius: 8px; font-size: 0.9rem; cursor: pointer; transition: background 0.3s; text-align: center; }
     .btn:hover { background: #5b6a2e; }
-    .section {
-      display: none;
-      background: #fff;
-      padding: 1rem;
-      border-left: 4px solid var(--olive);
-      border-radius: 0 4px 4px 0;
-      margin-bottom: 1rem;
-    }
+    .section { display: none; background: #fff; padding: 1rem; border-left: 4px solid var(--olive); border-radius: 0 4px 4px 0; margin-bottom: 1rem; }
     .section.active { display: block; }
-    h2 {
-      margin-top: 0; color: var(--olive);
-      font-family: 'Playfair Display', serif;
-    }
+    h2 { margin-top: 0; color: var(--olive); font-family: 'Playfair Display', serif; }
     ul { padding-left: 1.2rem; }
     ul li { margin-bottom: 0.5rem; }
   </style>
@@ -83,7 +43,7 @@
       <button class="btn" data-section="lanches">Lanches & Açaí</button>
       <button class="btn" data-section="atrativos">Principais Atrações</button>
       <button class="btn" data-section="guias">Guias Parceiros</button>
-      <button class="btn" data-section="sustentabilidade">Sustentabilidade</button>
+      <button class="btn" data-section="regras">Regras da Casa</button>
       <button class="btn" data-section="uteis">Informações Úteis</button>
     </div>
 
@@ -95,7 +55,8 @@
 
     <div id="localizacao" class="section">
       <h2>📍 Localização</h2>
-      <p>Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai - Alto Paraíso de GO (atrás da Pousada Paralelo 14).</p>
+      <p>Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai - Alto Paraíso de GO (atrás da Pousada Paralelo 14).<br>
+      Obs: no app de mapas, procure por <em>Villa Ágape Chapada</em>.</p>
       <p><a href="https://www.google.com/maps?q=Villa+%C3%81gape+Chapada" target="_blank">Google Maps</a> | <a href="https://ul.waze.com/ul?ll=-14.14792300%2C-47.52013900" target="_blank">Waze</a></p>
     </div>
 
@@ -130,7 +91,6 @@
         <li>Jardim do Alto</li>
         <li>Bali Pizza e Bar</li>
         <li>Pizzaria Vila Chamego</li>
-        <li>Alta Gastronomia</li>
         <li>Jambalaya (alto)</li>
         <li>Restaurante Magnolia (alto)</li>
       </ul>
@@ -139,6 +99,9 @@
         <li>Vendinha 1961 (alto)</li>
         <li>Bar Zen (alto)</li>
         <li>Arena Maya</li>
+        <li>Cevada</li>
+        <li>Espelunca</li>
+        <li>Hangar</li>
       </ul>
     </div>
 
@@ -184,24 +147,20 @@
     <div id="guias" class="section">
       <h2>🧭 Guias Parceiros</h2>
       <ul>
-        <li><strong>Ana Carolina:</strong> Condutor de Ecoturismo, nativa do Cerrado, roteiros alternativos e registros autorais.</li>
-        <li><strong>Edson:</strong> Guia de Ecoturismo na Chapada dos Veadeiros-GO; roteiros personalizados de acordo com seu perfil; veículo próprio.<br>
-          <a href="https://wa.me/5511940012935" target="_blank">WhatsApp (11) 94001-2935</a> | <a href="https://www.instagram.com/acsguiadachapada/" target="_blank">@acsguiadachapada</a>
-        </li>
-        <li><strong>Reis:</strong> Guia de Ecoturismo na Chapada dos Veadeiros-GO; associado e credenciado; transporte 4x4.<br>
-          <a href="http://wa.me/message/VUODZUPBKIREJ1" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/reis.guia.chapada/" target="_blank">@reis.guia.chapada</a>
-        </li>
+        <li><strong>Ana Carolina:</strong> Guia de Ecoturismo na Chapada dos Veadeiros-GO. Roteiros de acordo com o seu perfil. Veículo próprio. <br><a href="https://instagram.com/acsguiadachapada" target="_blank">@acsguiadachapada</a> &middot; <a href="https://wa.me/5511940012935" target="_blank">(11) 94001-2935</a></li>
+        <li><strong>Edson:</strong> Guia de Ecoturismo na Chapada dos Veadeiros -GO. Associado e credenciado. Transporte 4x4. <br><a href="https://instagram.com/ed_ecoturismo_chapada" target="_blank">@ed_ecoturismo_chapada</a> &middot; +55 61 8236-1115</li>
+        <li><strong>Reis:</strong> Condutor de Ecoturismo; Nativo do Cerrado; Roteiros alternativos; Lado B; Registros autorais. <br><a href="https://instagram.com/reis.guia.chapada" target="_blank">@reis.guia.chapada</a> &middot; 62 99903-5243</li>
       </ul>
     </div>
 
-    <div id="sustentabilidade" class="section">
-      <h2>♻️ Sustentabilidade</h2>
+    <div id="regras" class="section">
+      <h2>🏠 Regras da Casa</h2>
       <ul>
         <li>Descartar o lixo na lixeira que encontra-se no quintal antes do check-out.</li>
         <li>Banhos rápidos e uso moderado de secador.</li>
         <li>Silêncio das 22h às 7h.</li>
         <li>Não fumar dentro dos chalés (permitido na varanda).</li>
-        <li>Lave louça e descarte lixo antes do check-out.</li>
+        <li>Lave a louça e descarte o lixo antes do check-out.</li>
       </ul>
     </div>
 
@@ -229,4 +188,3 @@
   </script>
 </body>
 </html>
-
