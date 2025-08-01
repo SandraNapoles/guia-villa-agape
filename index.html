@@ -1,131 +1,34 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Villa Ágape - Guia do Hóspede</title>
+  <title>Guia Villa Ágape</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f1ec;
-      color: #333;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
       max-width: 800px;
       margin: auto;
-      padding: 20px;
     }
-
-    h2 {
-      color: #4a7c59;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    button.accordion {
-      background-color: #fff;
-      color: #333;
-      cursor: pointer;
-      padding: 18px;
+    button {
+      display: block;
       width: 100%;
-      text-align: left;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 1rem;
       border: none;
-      outline: none;
-      transition: background-color 0.2s ease;
-      font-size: 16px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    button.accordion:hover {
-      background-color: #ece7e1;
-    }
-
-    div.panel {
-      padding: 0 18px;
-      display: none;
-      background-color: #fafafa;
-      overflow: hidden;
-      border-bottom: 1px solid #ddd;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    a {
-      color: #1e88e5;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-
-<h2>✨ Bem-vindo à Villa Ágape ✨</h2>
-
-<button class="accordion">📍 Como Chegar</button>
-<div class="panel">
-  <p>📌 Endereço: Rua Leozino Bernardes, Qd. 51 Casa 07 - Monte Sinai - Alto Paraíso de GO/GO</p>
-  <p>🚗 Use o <a href="https://waze.com/ul/h6vqpw8kyk" target="_blank">Waze</a> ou <a href="https://maps.app.goo.gl/EdxW5LbRJDyyTNh3A" target="_blank">Google Maps ou Waze</a> e digite “Villa Ágape Chapada”.</p>
-</div>
-
-<button class="accordion">🧳 O que trazer</button>
-<div class="panel">
-  <ul>
-    <li>Roupas leves e confortáveis</li>
-    <li>Agasalho para noites frias</li>
-    <li>Calçado para trilha</li>
-    <li>Protetor solar e repelente</li>
-    <li>Garrafa d’água reutilizável</li>
-    <li>Lanterna (pode ser do celular)</li>
-    <li>Toalha para a cachoeira</li>
-    <li>Boa energia e mente aberta 🧘‍♀️</li>
-  </ul>
-</div>
-
-<button class="accordion">🌕 Fase da Lua</button>
-<div class="panel">
-  <p>Nesta semana, estamos sob a <strong>Lua Crescente</strong> – momento ideal para tomar decisões e agir com firmeza. 🌱</p>
-</div>
-
-<button class="accordion">📏 Regras da Casa</button>
-<div class="panel">
-  <ul>
-    <li>Silêncio a partir das 22h</li>
-    <li>Não fumar dentro dos quartos</li>
-    <li>Retirar o lixo, e descartá-lo na lixeira indicada</li>
-    <li>Evitar desperdício de água e energia elétrica💧</li>
-  </ul>
-</div>
-
-<button class="accordion">📸 Dicas Imperdíveis</button>
-<div class="panel">
-  <ul>
-    <li>🌊 Cachoeira Santa Bárbara</li>
-    <li>🌄 Mirante da Janela</li>
-    <li>🌌 Céu estrelado em noites de lua nova</li>
-    <li>🍃 Feira Orgânica de sábado e domingo (em Alto Paraíso)</li>
-  </ul>
-</div>
-
-<button class="accordion">📱 Falar com Sandra</button>
-<div class="panel">
-  <p>Fale comigo pelo WhatsApp:</p>
-  <a href="https://wa.me/55SEUNUMERO" target="_blank">🌿 Falar com Sandra</a>
-</div>
-
-<script>
-  var acc = document.getElementsByClassName("accordion");
-  for (var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      panel.style.display = panel.style.display === "block" ? "none" : "block";
-    });
-  }
-</script>
-
-</body>
-</html>
+      border-radius: 8px;
+      background-color: #32CD32;
+      color: white;
