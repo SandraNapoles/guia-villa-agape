@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia do Hóspede - Villa Ágape</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --olive: #708238;
+      --sand: #f5f0e1;
+      --accent: #5C1A13;
+      --text: #333;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: var(--sand);
+      color: var(--text);
+    }
+    header {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    header h1 span {
+      display: block;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .btn-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      background: var(--olive);
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: center;
+    }
+    .btn:hover {
+      background: #5b6a2e;
+    }
+    .section {
+      display: none;
+      background: #fff;
+      padding: 1rem;
+      border-left: 4px solid var(--olive);
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 1rem;
+    }
+    .section.active {
+      display: block;
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--olive);
+      font-family: 'Playfair Display', serif;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guia do Hóspede <span>Villa Ágape</span></h1>
+  </header>
+  <div class="container">
+    <div class="btn-group">
+      <button class="btn" data-section="checkin">Check-in & Check-out</button>
+      <button class="btn" data-section="localizacao">Localização</button>
+      <button class="btn" data-section="wifi">Wi-Fi & Voltagem</button>
+      <button class="btn" data-section="cafe">Café-da-manhã (Opcional)</button>
+      <button class="btn" data-section="restaurantes">Restaurantes & Pizzarias</button>
+      <button class="btn" data-section="lanches">Lanches & Açaí</button>
+      <button class="btn" data-section="atrativos">Principais Atrações</button>
+      <button class="btn" data-section="guias">Guias Parceiros</button>
+      <button class="btn" data-section="regras">Regras da Casa</button>
+      <button class="btn" data-section="uteis">Informações Úteis</button>
+    </div>
+
+    <div id="checkin" class="section">
+      <h2>🕒 Check-in & Check-out</h2>
+      <p><strong>Check-in:</strong> a partir das 15h (flexível, conforme disponibilidade).</p>
+      <p><strong>Check-out:</strong> até as 11h (podemos estender se for possível).</p>
+    </div>
+
+    <div id="localizacao" class="section">
+      <h2>📍 Localização</h2>
+      <p>Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai - Alto Paraíso de GO (atrás da Pousada Paralelo 14).<br>
+      Obs: no app de mapas, procure por <em>Villa Ágape Chapada</em>.</p>
+      <p><a href="https://www.google.com/maps?q=Villa+%C3%81gape+Chapada" target="_blank">Google Maps</a> | <a href="https://ul.waze.com/ul?ll=-14.14792300%2C-47.52013900" target="_blank">Waze</a></p>
+    </div>
+    <!-- restante do conteúdo omitido para brevidade -->
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.btn');
+      buttons.forEach(btn => btn.addEventListener('click', () => {
+        const section = btn.getAttribute('data-section');
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.getElementById(section).classList.add('active');
+      }));
+    });
+  </script>
+</body>
+</html>
