@@ -59,92 +59,46 @@
     <p>Escolha uma categoria para visualizar:</p>
   </header>
   <div class="container">
-    <button class="btn" onclick="showSection('checkin')">🕒 Check-in & Check-out</button>
-    <button class="btn" onclick="showSection('localizacao')">📍 Localização</button>
-    <button class="btn" onclick="showSection('wifi')">📶 Wi-Fi e Voltagem</button>
-    <button class="btn" onclick="showSection('cafe')">🥐 Café da Manhã</button>
-    <button class="btn" onclick="showSection('restaurantes')">🍽️ Restaurantes e Lanches</button>
-    <button class="btn" onclick="showSection('atrativos')">🌄 Atrações</button>
-    <button class="btn" onclick="showSection('guias')">🧭 Guias Parceiros</button>
-    <button class="btn" onclick="showSection('consciencia')">♻️ Consciência & Sustentabilidade</button>
-    <button class="btn" onclick="showSection('uteis')">📝 Informações Úteis</button>
+    <button class="btn" data-section="checkin">🕒 Check-in & Check-out</button>
+    <button class="btn" data-section="localizacao">📍 Localização</button>
+    <button class="btn" data-section="wifi">📶 Wi-Fi e Voltagem</button>
+    <button class="btn" data-section="cafe">🥐 Café da Manhã</button>
+    <button class="btn" data-section="restaurantes">🍽️ Restaurantes e Lanches</button>
+    <button class="btn" data-section="atrativos">🌄 Atrações</button>
+    <button class="btn" data-section="guias">🧭 Guias Parceiros</button>
+    <button class="btn" data-section="consciencia">♻️ Consciência & Sustentabilidade</button>
+    <button class="btn" data-section="uteis">📝 Informações Úteis</button>
 
-    <div id="checkin" class="section">
-      <h2>Check-in & Check-out</h2>
-      <p><strong>Check-in:</strong> a partir das 15h (pode consultar sobre disponibilidade antes)</p>
-      <p><strong>Check-out:</strong> até as 11h (podemos flexibilizar, consulte-nos)</p>
-    </div>
-
-    <div id="localizacao" class="section">
-      <h2>Localização</h2>
-      <p>📍 Rua Leozino Bernardes, Qd 51 Casa 7 - Monte Sinai (atrás da Pousada Paralelo 14)</p>
-      <p><a href="https://www.google.com/maps?q=Villa+%C3%81gape+Chapada" target="_blank">Google Maps</a> | <a href="https://ul.waze.com/ul?ll=-14.14792300%2C-47.52013900" target="_blank">Waze</a></p>
-    </div>
-
-    <div id="wifi" class="section">
-      <h2>Wi-Fi e Voltagem</h2>
-      <p><strong>Login:</strong> Villa Ágape_Visitantes</p>
-      <p><strong>Senha:</strong> pazeamor</p>
-      <p><strong>Voltagem:</strong> 220v</p>
-    </div>
-
-    <div id="cafe" class="section">
-      <h2>Café da Manhã (opcional)</h2>
-      <p>📍 Pousada Ostara (60m de distância) | Buffet self-service</p>
-      <p><strong>Horário:</strong> 06:30 às 09:30 | <strong>Valor:</strong> R$ 30,00/pessoa</p>
-      <p><a href="https://maps.app.goo.gl/RMhN6kqRSTWr3WRJ6" target="_blank">Ver no mapa</a></p>
-    </div>
-
-    <div id="restaurantes" class="section">
-      <h2>Restaurantes e Lanches</h2>
-      <p><strong>Restaurantes:</strong> Tabocas, Torresmo, Arena Maya, Alquimia, Lobo Guará, Cravo & Canela...</p>
-      <p><strong>Lanches:</strong> Magnífico, Sorveteria Frutos do Cerrado, Açaí do Guedes, Brocas...</p>
-    </div>
-
-    <div id="atrativos" class="section">
-      <h2>Principais Atrações</h2>
-      <p><strong>Parque Nacional da Chapada dos Veadeiros:</strong> trilhas, cachoeiras do Rio Preto e cânions.</p>
-      <p><strong>Vale da Lua:</strong> formações rochosas e poços para banho.</p>
-      <p><strong>Cataratas dos Couros:</strong> Almécegas (São Vicente), Parafuso, Bujão e Muralha.</p>
-      <p><strong>Cachoeira Santa Bárbara:</strong> águas azul-esverdeadas, acesso por guias locais.</p>
-      <p><strong>Cachoeiras das Loquinhas:</strong> águas claras e trilhas fáceis.</p>
-      <p><strong>Mirante da Janela:</strong> vista panorâmica, trilha desafiadora.</p>
-      <p><strong>Saltos do Rio Preto:</strong> duas quedas impressionantes, acesso por trilha.</p>
-      <p><strong>Jardim de Maytrea:</strong> pôr do sol entre São Jorge e Alto Paraíso.</p>
-      <p><strong>Cachoeira do Segredo:</strong> 100m de queda, trilha de acesso.</p>
-      <p><strong>Cânions e Cachoeiras das Cariocas:</strong> trilhas e paisagens deslumbrantes.</p>
-      <p><strong>Cachoeira do Morro Redondo:</strong> 60m de queda, fácil acesso.</p>
-      <p><em>Outras atividades incluem trilhas aquáticas, rafting e tubing no rio das Almas.</em></p>
-    </div>
-
-    <div id="guias" class="section">
-      <h2>Guias Parceiros</h2>
-      <p><strong>Ana Carolina:</strong> Roteiros alternativos e autorais</p>
-      <p><strong>Edson:</strong> <a href="https://wa.me/5511940012935" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/acsguiadachapada/" target="_blank">Instagram</a></p>
-      <p><strong>Reis:</strong> <a href="http://wa.me/message/VUODZUPBKIREJ1" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/reis.guia.chapada/" target="_blank">Instagram</a></p>
-      <p><strong>Guilherme:</strong> <a href="https://wa.me/5562994783982" target="_blank">WhatsApp</a> | <a href="https://www.instagram.com/gui.guia_chapadaveadeiros/" target="_blank">Instagram</a></p>
-    </div>
-
-    <div id="consciencia" class="section">
-      <h2>Consciência & Sustentabilidade</h2>
-      <p>Não jogar papel no vaso 🚽, separar o lixo, usar menos água e energia. Valorizamos práticas conscientes.</p>
-    </div>
-
-    <div id="uteis" class="section">
-      <h2>Informações Úteis</h2>
-      <p>⚠️ Pode haver queda de energia, sinal ou internet em alta temporada.</p>
-      <p>🏦 Bancos disponíveis: Itaú e Banco do Brasil (até 17h)</p>
-      <p>🧢 Leve repelente, protetor solar, chapéu e um casaquinho.</p>
-    </div>
+    <div id="checkin" class="section">...</div>
+    <div id="localizacao" class="section">...</div>
+    <div id="wifi" class="section">...</div>
+    <div id="cafe" class="section">...</div>
+    <div id="restaurantes" class="section">...</div>
+    <div id="atrativos" class="section">...</div>
+    <div id="guias" class="section">...</div>
+    <div id="consciencia" class="section">...</div>
+    <div id="uteis" class="section">...</div>
   </div>
 
   <script>
-    function showSection(id) {
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.btn');
       const sections = document.querySelectorAll('.section');
-      sections.forEach(section => section.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const target = button.getAttribute('data-section');
+          sections.forEach(section => {
+            section.style.display = 'none';
+          });
+          const selected = document.getElementById(target);
+          if (selected) {
+            selected.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
